@@ -4,15 +4,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import Logo Images
-import logo1 from "../assets/image/4.png";
-import logo2 from "../assets/image/5.webp";
-import logo3 from "../assets/image/6.png";
-import logo4 from "../assets/image/7.png";
-import logo5 from "../assets/image/8.png";
-import logo6 from "../assets/image/Logo.png";
-import logo7 from "../assets/image/Logo.png";
-import logo8 from "../assets/image/Logo.webp";
-import logo9 from "../assets/image/Logo.png";
+import logo1 from "../assets/image/top-developers/4.png";
+import logo2 from "../assets/image/top-developers/5.webp";
+import logo3 from "../assets/image/top-developers/6.png";
+import logo4 from "../assets/image/top-developers/7.png";
+import logo5 from "../assets/image/top-developers/8.png";
+import logo6 from "../assets/image/top-developers/Logo.png";
+import logo7 from "../assets/image/top-developers/Logo.png";
+import logo8 from "../assets/image/top-developers/Logo.webp";
+import logo9 from "../assets/image/top-developers/Logo.png";
 // import logo10 from "../assets/image/logo10.png";
 
 const TopDevelopers = () => {

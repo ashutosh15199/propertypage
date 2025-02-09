@@ -6,13 +6,13 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 // Import images
-import Banner1Large from "../assets/image/Banner.webp";
-import Banner2Large from "../assets/image/Banner.webp";
-import Banner3Large from "../assets/image/Banner.webp";
+import Banner1Large from "../assets/image/banner/Banner.webp";
+import Banner2Large from "../assets/image/banner/Banner.webp";
+import Banner3Large from "../assets/image/banner/Banner.webp";
 
-import Banner1Small from "../assets/image/banner.webp";
-import Banner2Small from "../assets/image/banner.webp";
-import Banner3Small from "../assets/image/banner.webp";
+import Banner1Small from "../assets/image/banner/banner.webp";
+import Banner2Small from "../assets/image/banner/banner.webp";
+import Banner3Small from "../assets/image/banner/banner.webp";
 
 const Banner = () => {
   const banners = [

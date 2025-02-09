@@ -1,5 +1,5 @@
-import { useState } from 'react'
-
+import React,{ useState } from 'react'
+import image from '../assets/image/logo/1.png'
 const NavManu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(null)
@@ -14,13 +14,10 @@ const NavManu = () => {
         {/* Logo */}
         <a href='#' className='flex items-center space-x-3'>
           <img
-            src='https://flowbite.com/docs/images/logo.svg'
-            className='h-8'
+            src={image}
+            className='h-15 w-[150px]'
             alt='Flowbite Logo'
           />
-          <span className='text-2xl font-semibold dark:text-white'>
-            Flowbite
-          </span>
         </a>
 
         {/* Mobile Menu Button */}
