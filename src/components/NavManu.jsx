@@ -9,7 +9,7 @@ const NavManu = () => {
   }
 
   return (
-    <nav className='bg-white dark:bg-gray-900 fixed w-full top-0 left-0 z-50 shadow-md'>
+    <nav className='bg-white fixed w-full top-0 left-0 z-50 shadow-md'>
       <div className='max-w-screen-xl mx-auto flex items-center justify-between md:justify-center  p-4 relative'>
         {/* Logo */}
         <a href='#' className='flex items-center space-x-3'>
