@@ -14,7 +14,7 @@ const NavManu = () => {
         {/* Logo */}
         <a href='#' className='flex items-center space-x-3'>
           <img
-            src={image}
+            src=''
             className='h-15 w-[150px]'
             alt='Flowbite Logo'
           />

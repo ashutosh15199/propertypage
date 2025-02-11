@@ -12,11 +12,11 @@ import logo from '../assets/image/logo/1.png'
 
 const Footer = () => {
   return (
-    <footer className='text-gray-900 bg-white py-10'>
+    <footer className='text-gray-900 bg-white mt-10'>
       <div className='max-w-6xl mx-auto px-5 flex flex-wrap justify-between gap-8'>
         {/* Logo & Location */}
         <div className='flex flex-col items-start'>
-          <img src={logo} alt='Company Logo' className='w-40 mb-3' />
+          <img src='' alt='' className='w-40 mb-3' />
         </div>
 
         {/* Contact Us */}
@@ -104,9 +104,12 @@ const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      {/* <div className="text-center text-gray-500 text-sm mt-6 border-t border-gray-300 pt-4">
-        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
-      </div> */}
+      <div className="text-center bg-black text-gray-300 text-[10px] mt-6 border-t border-gray-300 pt-4">
+     <p> Marketed By - Authorised Channel Partner | Haryana RERA Regd NO. RC/ REA/HARERA/GGM|2019|279,<br/>
+This is not the official website of developer property, it belongs to authorised channel partners for information purposes only. All rights for logo & images are reserved to the developer. Thank you for visiting our website. This disclaimer ("Disclaimer") is applicable to this website and all microsites and websites owned by us. By using or accessing this website you agree with the Disclaimer without any qualification or limitation. || All Rights Reserved CopyRight © 2024</p>
+<br/>
+<span className='text-lg'>Disclaimer and Privacy Policy</span>
+      </div>
     </footer>
   )
 }

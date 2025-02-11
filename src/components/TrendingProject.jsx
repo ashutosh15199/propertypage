@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import backgroundImage from '../assets/image/backgroundimage/1.webp'
-
+import { GiMusicalKeyboard } from 'react-icons/gi'
+import { LiaRupeeSignSolid } from 'react-icons/lia'
 // Importing property images
 import image1 from '../assets/image/trending-project/pune-east/1.webp'
 import image2 from '../assets/image/trending-project/pune-east/2.webp'
@@ -27,67 +27,214 @@ import image16 from '../assets/image/trending-project/pune-west/3.webp'
 import image17 from '../assets/image/trending-project/pune-west/4.webp'
 import image18 from '../assets/image/trending-project/pune-west/5.webp'
 import image19 from '../assets/image/trending-project/pune-west/6.webp'
-
+import { FaMapMarkerAlt } from 'react-icons/fa'
+import { IoCarOutline } from 'react-icons/io5'
+// import { FaMapMarkerAlt } from 'react-icons/fa';
+import EnquiryForm from './EnquiryForm'
 // Property Data
 const properties = {
-  Pune: [
-    { id: 1, image: image1, title: 'Luxury Apartment' },
-    { id: 2, image: image2, title: 'Modern Villa' },
-    { id: 3, image: image3, title: 'Cozy Condo' },
-    { id: 4, image: image4, title: 'Spacious Flat' },
-    { id: 5, image: image5, title: 'Elegant Duplex' },
-    { id: 6, image: image6, title: 'Penthouse Suite' }
+  'Pune East': [
+    {
+      id: 1,
+      image: image1,
+      title: 'Luxury Apartment',
+      location: 'Pune East',
+      bhk: '2 BHK',
+      price: '₹ 1.5 Cr'
+    },
+    {
+      id: 2,
+      image: image2,
+      title: 'Modern Villa',
+      location: 'Pune East',
+      bhk: '3 BHK',
+      price: '₹ 2.8 Cr'
+    },
+    {
+      id: 3,
+      image: image3,
+      title: 'Cozy Condo',
+      location: 'Pune East',
+      bhk: '1 BHK',
+      price: '₹ 90 L'
+    },
+    {
+      id: 4,
+      image: image4,
+      title: 'Spacious Flat',
+      location: 'Pune East',
+      bhk: '2.5 BHK',
+      price: '₹ 1.8 Cr'
+    },
+    {
+      id: 5,
+      image: image5,
+      title: 'Elegant Duplex',
+      location: 'Pune East',
+      bhk: '4 BHK',
+      price: '₹ 3.2 Cr'
+    },
+    {
+      id: 6,
+      image: image6,
+      title: 'Penthouse Suite',
+      location: 'Pune East',
+      bhk: '5 BHK',
+      price: '₹ 5 Cr'
+    }
   ],
-  Mumbai: [
-    { id: 1, image: image8, title: 'Beachfront Villa' },
-    { id: 2, image: image9, title: 'High-Rise Apartment' },
-    { id: 3, image: image10, title: 'Downtown Loft' },
-    { id: 4, image: image11, title: 'City Penthouse' },
-    { id: 5, image: image12, title: 'Luxury Townhouse' },
-    { id: 6, image: image13, title: 'Skyscraper Condo' }
+  'Pune Central': [
+    {
+      id: 1,
+      image: image8,
+      title: 'Beachfront Villa',
+      location: 'Pune Central',
+      bhk: '4 BHK',
+      price: '₹ 5.5 Cr'
+    },
+    {
+      id: 2,
+      image: image9,
+      title: 'High-Rise Apartment',
+      location: 'Pune Central',
+      bhk: '3 BHK',
+      price: '₹ 3 Cr'
+    },
+    {
+      id: 3,
+      image: image10,
+      title: 'Downtown Loft',
+      location: 'Pune Central',
+      bhk: '2 BHK',
+      price: '₹ 2.2 Cr'
+    },
+    {
+      id: 4,
+      image: image11,
+      title: 'City Penthouse',
+      location: 'Pune Central',
+      bhk: '5 BHK',
+      price: '₹ 7 Cr'
+    },
+    {
+      id: 5,
+      image: image12,
+      title: 'Luxury Townhouse',
+      location: 'Pune Central',
+      bhk: '4 BHK',
+      price: '₹ 4.5 Cr'
+    },
+    {
+      id: 6,
+      image: image13,
+      title: 'Skyscraper Condo',
+      location: 'Pune Central',
+      bhk: '3 BHK',
+      price: '₹ 3.5 Cr'
+    }
   ],
-  Bengaluru: [
-    { id: 1, image: image14, title: 'Tech Park Condo' },
-    { id: 2, image: image15, title: 'Suburban Villa' },
-    { id: 3, image: image16, title: 'Greenfield Home' },
-    { id: 4, image: image17, title: 'Lakeview Apartment' },
-    { id: 5, image: image18, title: 'Modern Bungalow' },
-    { id: 6, image: image19, title: 'Luxury Flat' }
+  'Pune West': [
+    {
+      id: 1,
+      image: image14,
+      title: 'Tech Park Condo',
+      location: 'Pune West',
+      bhk: '2 BHK',
+      price: '₹ 1.2 Cr'
+    },
+    {
+      id: 2,
+      image: image15,
+      title: 'Suburban Villa',
+      location: 'Pune West',
+      bhk: '3 BHK',
+      price: '₹ 2.5 Cr'
+    },
+    {
+      id: 3,
+      image: image16,
+      title: 'Greenfield Home',
+      location: 'Pune West',
+      bhk: '3.5 BHK',
+      price: '₹ 3.1 Cr'
+    },
+    {
+      id: 4,
+      image: image17,
+      title: 'Lakeview Apartment',
+      location: 'Pune West',
+      bhk: '2 BHK',
+      price: '₹ 1.4 Cr'
+    },
+    {
+      id: 5,
+      image: image18,
+      title: 'Modern Bungalow',
+      location: 'Pune West',
+      bhk: '4 BHK',
+      price: '₹ 3.8 Cr'
+    },
+    {
+      id: 6,
+      image: image19,
+      title: 'Luxury Flat',
+      location: 'Pune West',
+      bhk: '3 BHK',
+      price: '₹ 2.7 Cr'
+    }
   ]
 }
 
 const TrendingProject = () => {
-  const [selectedCity, setSelectedCity] = useState('Pune')
+  const [selectedCity, setSelectedCity] = useState('Pune East')
+  const [isFormOpen, setIsFormOpen] = useState(null)
+  const swiperRef = useRef(null)
+
+  // Open Form and Blur Background
+  const handleEnquireClick = () => {
+    setIsFormOpen(true)
+    if (swiperRef.current) swiperRef.current.autoplay.stop() // Stop autoplay
+  }
+
+  // Close Form and Restore Background
+  const handleCloseForm = () => {
+    setIsFormOpen(false)
+    if (swiperRef.current) swiperRef.current.autoplay.start() // Resume autoplay
+  }
 
   return (
-    <div
-      className='relative bg-cover bg-center p-10 mt-10'
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      {/* Location Buttons */}
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Trending Projects</h2>
-      <div className='flex justify-center space-x-4 mb-6'>
-        {Object.keys(properties).map(city => (
-          <button
-            key={city}
-            onClick={() => setSelectedCity(city)}
-            className={`px-6 py-2 text-white font-semibold rounded-lg transition ${
-              selectedCity === city
-                ? 'bg-gray-600 shadow-lg transform scale-110'
-                : 'bg-gray-500 hover:bg-gray-700'
-            }`}
-          >
-            {city}
-          </button>
-        ))}
-      </div>
+    <>
+      <div
+        className=' bg-cover bg-center p-10 mt-10'
+        // style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <h2 className='text-2xl font-bold text-center mb-6 text-gray-800'>
+          Trending Projects
+        </h2>
 
-      {/* Property Slider */}
-      <div className='relative'>
+        {/* Location Buttons */}
+        <div className='flex justify-center space-x-4 mb-6'>
+          {Object.keys(properties).map(city => (
+            <button
+              key={city}
+              onClick={() => setSelectedCity(city)}
+              className={`px-6 py-2 text-white font-semibold rounded-lg transition ${
+                selectedCity === city
+                  ? 'bg-gray-600 shadow-lg transform scale-110'
+                  : 'bg-gray-500 hover:bg-gray-700'
+              }`}
+            >
+              {city}
+            </button>
+          ))}
+        </div>
+
+        {/* Property Slider */}
+        <div className={`transition-all duration-300 ${isFormOpen ? 'blur-md pointer-events-none' : ''}`}>
         <Swiper
-          modules={[Autoplay, Navigation]}
+          ref={swiperRef}
+          modules={[Autoplay]}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          navigation
           spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
@@ -99,32 +246,50 @@ const TrendingProject = () => {
         >
           {properties[selectedCity].map(property => (
             <SwiperSlide key={property.id}>
-              <div className='relative bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl'>
+              <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg border bg-white'>
                 <img
+                  className='w-full h-60 object-cover'
                   src={property.image}
                   alt={property.title}
-                  className='w-full h-56 object-cover'
                 />
-                {/* Title placed below the image */}
-                <div className='p-4 text-center bg-gray-500'>
-                  <span className='text-gray-900 font-bold text-lg'>
-                    {property.title}
-                  </span>
+                <h2 className='flex items-center justify-center text-lg font-bold text-gray-800 mt-3'>
+                  {property.title}
+                </h2>
+                <div className='p-4'>
+                  <div className='flex items-center gap-1 text-gray-500 text-xl'>
+                    <FaMapMarkerAlt className='text-[14px]' />
+                    <p className='text-sm text-gray-500'>{property.location}</p>
+                  </div>
+
+                  <div className='flex justify-between items-center gap-1'>
+                    <p className='text-sm text-gray-500 ml-1'>
+                      {property.price}
+                    </p>
+                    <button
+                    className='bg-gray-500 text-white px-4 py-1 w-[120px] rounded-lg text-sm'
+                    onClick={() => handleEnquireClick(property.id)}
+                  >
+                    Enquire Now
+                  </button>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
-          <div className='hidden swiper-button-next'></div>
-          <div className='hidden swiper-button-prev'></div>
         </Swiper>
       </div>
-      <style>{`
-        .swiper-button-next, .swiper-button-prev {
-          display: none !important;
-        }
-      `}</style>
-    </div>
+      {isFormOpen && (
+        <div className='fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50'>
+        
+
+          {/* Your Form Fields Here */}
+          <EnquiryForm onClose={handleCloseForm} />
+
+        
+        </div>
+      )}
+      </div>
+    </>
   )
 }
-
 export default TrendingProject
