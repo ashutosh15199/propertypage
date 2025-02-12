@@ -6,9 +6,9 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 // Import images
-import Banner1Large from "../assets/image/banner/Banner.webp";
-import Banner2Large from "../assets/image/banner/Banner.webp";
-import Banner3Large from "../assets/image/banner/Banner.webp";
+import Banner1Large from "../assets/image/banner/Banner-1.webp";
+import Banner2Large from "../assets/image/banner/Banner-1.webp";
+import Banner3Large from "../assets/image/banner/Banner-1.webp";
 
 import Banner1Small from "../assets/image/banner/banner.webp";
 import Banner2Small from "../assets/image/banner/banner.webp";
@@ -41,7 +41,7 @@ const Banner = () => {
             <img
               src={banner.large}
               alt={`Banner ${index + 1}`}
-              className="hidden md:block w-full h-[700px] object-cover"
+              className="hidden md:block w-full h-[900px] object-cover"
             />
             <img
               src={banner.small}

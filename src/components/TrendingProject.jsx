@@ -37,150 +37,166 @@ const properties = {
     {
       id: 1,
       image: image1,
-      title: 'Luxury Apartment',
-      location: 'Pune East',
-      bhk: '2 BHK',
-      price: '₹ 1.5 Cr'
+      title: 'Lodha Giardino',
+      location: 'kharadi',
+      bhk: '3 & 4 BHK',
+      price: '₹ 2.07 Cr*'
     },
     {
       id: 2,
       image: image2,
-      title: 'Modern Villa',
-      location: 'Pune East',
-      bhk: '3 BHK',
-      price: '₹ 2.8 Cr'
+      title: 'Gera’s Island Of Joy',
+      location: 'Kharadi',
+      bhk: '2, 3 & 4 BHK',
+      price: '₹ 83.90 Lacs*'
     },
     {
       id: 3,
       image: image3,
-      title: 'Cozy Condo',
-      location: 'Pune East',
-      bhk: '1 BHK',
-      price: '₹ 90 L'
+      title: 'Aditya Birla Real Estate',
+      location: 'Wellesley Road',
+      bhk: '1, 2, 3 & 4 BHK',
+      price: '₹ 0.95 Cr*'
     },
     {
       id: 4,
       image: image4,
-      title: 'Spacious Flat',
-      location: 'Pune East',
-      bhk: '2.5 BHK',
-      price: '₹ 1.8 Cr'
+      title: 'Majestique Evolvus',
+      location: 'Kharadi',
+      bhk: '2, 3 & 4 BHK',
+      price: '₹ 1.26 Cr*'
     },
     {
       id: 5,
       image: image5,
-      title: 'Elegant Duplex',
-      location: 'Pune East',
-      bhk: '4 BHK',
-      price: '₹ 3.2 Cr'
+      title: 'Godrej SkyGreens',
+      location: 'Kharadi',
+      bhk: '1, 2 & 3 BHK',
+      price: '₹ On Request*'
     },
     {
       id: 6,
       image: image6,
-      title: 'Penthouse Suite',
-      location: 'Pune East',
-      bhk: '5 BHK',
-      price: '₹ 5 Cr'
-    }
+      title: 'Mantra - One Residences',
+      location: 'Magarpatta',
+      bhk: '3 & 4 BHK',
+      price: '₹ On Request*'
+    },
+    {
+      id: 7,
+      image: image6,
+      title: 'Mantra Riverside',
+      location: 'Balewadi',
+      bhk: '2, 3 & 4 BHK',
+      price: '₹ 1.26 Cr*'
+    },
+    {
+      id: 8,
+      image: image6,
+      title: 'Mantra Joypin',
+      location: 'Kharadi',
+      bhk: '2 & 3 BHK',
+      price: '₹ 1.15 Cr*'
+    },
   ],
   'Pune Central': [
     {
       id: 1,
       image: image8,
-      title: 'Beachfront Villa',
-      location: 'Pune Central',
-      bhk: '4 BHK',
-      price: '₹ 5.5 Cr'
+      title: 'Coming Soon',
+      location: '...',
+      bhk: '... BHK',
+      price: '₹ ... Cr'
     },
     {
       id: 2,
       image: image9,
-      title: 'High-Rise Apartment',
-      location: 'Pune Central',
-      bhk: '3 BHK',
-      price: '₹ 3 Cr'
+      title: 'Coming Soon',
+      location: '...',
+      bhk: '... BHK',
+      price: '₹ ... Cr'
     },
     {
       id: 3,
       image: image10,
-      title: 'Downtown Loft',
-      location: 'Pune Central',
-      bhk: '2 BHK',
-      price: '₹ 2.2 Cr'
+      title: 'Coming Soon',
+      location: '...',
+      bhk: '... BHK',
+      price: '₹ ... Cr'
     },
     {
       id: 4,
       image: image11,
-      title: 'City Penthouse',
-      location: 'Pune Central',
-      bhk: '5 BHK',
-      price: '₹ 7 Cr'
+      title: 'Coming Soon',
+      location: '...',
+      bhk: '... BHK',
+      price: '₹ ... Cr'
     },
     {
       id: 5,
       image: image12,
-      title: 'Luxury Townhouse',
-      location: 'Pune Central',
-      bhk: '4 BHK',
-      price: '₹ 4.5 Cr'
+      title: 'Coming Soon',
+      location: '...',
+      bhk: '... BHK',
+      price: '₹ ... Cr'
     },
     {
       id: 6,
       image: image13,
-      title: 'Skyscraper Condo',
-      location: 'Pune Central',
-      bhk: '3 BHK',
-      price: '₹ 3.5 Cr'
+      title: 'Coming Soon',
+      location: '...',
+      bhk: '... BHK',
+      price: '₹ ... Cr'
     }
   ],
   'Pune West': [
     {
       id: 1,
       image: image14,
-      title: 'Tech Park Condo',
-      location: 'Pune West',
-      bhk: '2 BHK',
-      price: '₹ 1.2 Cr'
+      title: 'Godrej Evergreen Square',
+      location: 'Hinjawadi',
+      bhk: '1, 2 & 3 BHK',
+      price: '₹ 59.99 Lacs*'
     },
     {
       id: 2,
       image: image15,
-      title: 'Suburban Villa',
-      location: 'Pune West',
-      bhk: '3 BHK',
-      price: '₹ 2.5 Cr'
+      title: 'Shapoorji  Golfland',
+      location: 'Bavdhan',
+      bhk: '2, 3 & 4 BHK',
+      price: '₹ 1.26 Cr*'
     },
     {
       id: 3,
       image: image16,
-      title: 'Greenfield Home',
-      location: 'Pune West',
-      bhk: '3.5 BHK',
-      price: '₹ 3.1 Cr'
+      title: 'Shapoorji Wildernest ',
+      location: 'Hinjawadi',
+      bhk: '3 & 4 BHK',
+      price: '₹ 1.79 Cr*'
     },
     {
       id: 4,
       image: image17,
-      title: 'Lakeview Apartment',
-      location: 'Pune West',
-      bhk: '2 BHK',
-      price: '₹ 1.4 Cr'
+      title: 'Gera’s Joy on the Tree Tops',
+      location: 'Hinjawadi',
+      bhk: '2 & 3 BHK',
+      price: '₹ On Request*'
     },
     {
       id: 5,
       image: image18,
-      title: 'Modern Bungalow',
-      location: 'Pune West',
-      bhk: '4 BHK',
+      title: 'Codename Trendy West',
+      location: 'Baner',
+      bhk: '2 & 3 BHK',
       price: '₹ 3.8 Cr'
     },
     {
       id: 6,
       image: image19,
-      title: 'Luxury Flat',
-      location: 'Pune West',
-      bhk: '3 BHK',
-      price: '₹ 2.7 Cr'
+      title: 'villas palladio',
+      location: 'Balewadi',
+      bhk: '3 & 4 BHK',
+      price: '₹ On Request* '
     }
   ]
 }
@@ -206,7 +222,7 @@ const TrendingProject = () => {
     <>
       <div
         className=' bg-cover bg-center p-10 mt-10'
-        // style={{ backgroundImage: `url(${backgroundImage})` }}
+      // style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <h2 className='text-2xl font-bold text-center mb-6 text-gray-800'>
           Trending Projects
@@ -218,76 +234,76 @@ const TrendingProject = () => {
             <button
               key={city}
               onClick={() => setSelectedCity(city)}
-              className={`px-6 py-2 text-white font-semibold rounded-lg transition ${
-                selectedCity === city
-                  ? 'bg-gray-600 shadow-lg transform scale-110'
-                  : 'bg-gray-500 hover:bg-gray-700'
-              }`}
+              className={`px-6 py-2 text-white text-[14px] leading-[20px] md:font-semibold rounded-lg transition whitespace-nowrap ${selectedCity === city
+                ? 'bg-gray-600 shadow-lg transform scale-110'
+                : 'bg-gray-500 hover:bg-gray-700'
+                }`}
             >
               {city}
             </button>
+
           ))}
         </div>
 
         {/* Property Slider */}
         <div className={`transition-all duration-300 ${isFormOpen ? 'blur-md pointer-events-none' : ''}`}>
-        <Swiper
-          ref={swiperRef}
-          modules={[Autoplay]}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-          }}
-          className='w-full max-w-5xl mx-auto'
-        >
-          {properties[selectedCity].map(property => (
-            <SwiperSlide key={property.id}>
-              <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg border bg-white'>
-                <img
-                  className='w-full h-60 object-cover'
-                  src={property.image}
-                  alt={property.title}
-                />
-                <h2 className='flex items-center justify-center text-lg font-bold text-gray-800 mt-3'>
-                  {property.title}
-                </h2>
-                <div className='p-4'>
-                  <div className='flex items-center gap-1 text-gray-500 text-xl'>
-                    <FaMapMarkerAlt className='text-[14px]' />
-                    <p className='text-sm text-gray-500'>{property.location}</p>
-                  </div>
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+             {properties[selectedCity].map(property => (
+              <SwiperSlide key={property.id}>
+                <div className='max-w-sm rounded-2xl overflow-hidden shadow-lg border bg-white'>
+                  <img
+                    className='w-full h-60 object-cover'
+                    src={property.image}
+                    alt={property.title}
+                  />
+                  <h2 className='flex items-center justify-center text-lg font-bold text-gray-800 mt-3'>
+                    {property.title}
+                  </h2>
+                  <div className='p-4'>
+                    <div className='flex items-center gap-1 text-gray-500 text-xl'>
+                      <FaMapMarkerAlt className='text-[14px]' />
+                      <p className='text-sm text-gray-500'>{property.location}</p>
+                    </div>
 
-                  <div className='flex justify-between items-center gap-1'>
-                    <p className='text-sm text-gray-500 ml-1'>
-                      {property.price}
-                    </p>
-                    <button
-                    className='bg-gray-500 text-white px-4 py-1 w-[120px] rounded-lg text-sm'
-                    onClick={() => handleEnquireClick(property.id)}
-                  >
-                    Enquire Now
-                  </button>
+                    <div className='flex justify-between items-center gap-1'>
+                      <p className='text-sm text-gray-500 ml-1'>
+                        {property.price}
+                      </p>
+                      <button
+                        className='bg-gray-500 text-white px-4 py-1 w-[120px] rounded-lg text-sm'
+                        onClick={() => handleEnquireClick(property.id)}
+                      >
+                        Enquire Now
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      {isFormOpen && (
-        <div className='fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50'>
-        
-
-          {/* Your Form Fields Here */}
-          <EnquiryForm onClose={handleCloseForm} />
-
-        
+              </SwiperSlide>
+            ))}
+            
+          </Swiper>
         </div>
-      )}
+        {isFormOpen && (
+          <div className='fixed inset-0 flex items-center justify-center  bg-opacity-50 z-50'>
+
+
+            {/* Your Form Fields Here */}
+            <EnquiryForm onClose={handleCloseForm} />
+
+
+          </div>
+        )}
       </div>
     </>
   )
