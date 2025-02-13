@@ -13,7 +13,7 @@ import logo from '../assets/image/logo/1.png'
 const Footer = () => {
   return (
     <footer className='text-gray-900 bg-white mt-10'>
-      <div className='max-w-6xl mx-auto px-5 flex flex-wrap justify-between gap-8'>
+      <div className='max-w-6xl mx-auto px-5 flex flex-wrap flex-col md:flex-row  justify-between gap-8'>
         {/* Logo & Location */}
         <div className='flex flex-col items-start'>
           <img src='' alt='' className='w-40 mb-3' />
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         {/* Follow Us (Social Media) */}
-        <div className='flex flex-col items-start'>
+        <div className='flex flex-col items-start ml-[50px]'>
           <h3 className='text-xl font-semibold mb-3 text-[#374151]'>
             Follow Us
           </h3>

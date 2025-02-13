@@ -27,7 +27,7 @@ const HotLocation = () => {
 
 
       <div className='relative max-w-6xl w-full text-white text-center'>
-        <h2 className='text-2xl md:text-4xl font-bold mb-8 text-white drop-shadow-lg'>
+        <h2 className='text-2xl  font-bold mb-8 text-white drop-shadow-lg'>
           Hot Locations
         </h2>
 

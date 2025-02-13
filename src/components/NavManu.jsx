@@ -11,7 +11,7 @@ const NavManu = () => {
 
   return (
     <nav className='bg-white fixed w-full top-0 left-0 z-50 shadow-md text-black'>
-      <div className='max-w-screen-xl mx-auto flex items-center justify-between md:justify-center p-4 relative'>
+      <div className='max-w-screen-xl mx-auto flex items-center justify-between sm:justify-start ml-0  sm:ml-[100px]  p-4 md:p-2 relative'>
         {/* Logo */}
         <a href='#' className='flex items-center space-x-3'>
           <img src={image} className='h-15 w-[150px]' alt='Logo' />
@@ -31,7 +31,7 @@ const NavManu = () => {
         <div className={`absolute md:relative md:flex flex-col md:flex-row w-full md:w-auto bg-white transition-all duration-300 ${
           isOpen ? 'top-16 left-0 md:h-auto flex' : 'hidden md:flex'
         }`}>
-          <ul className='flex flex-col md:flex-row items-center md:ml-[200px] mx-auto md:space-x-8 text-center text-black'>
+          <ul className='flex flex-col md:flex-row items-center ml-0 md:ml-[150px] 2xl:ml-[300px] mx-auto md:space-x-4 text-center text-black'>
             <li><a href='#' className='block py-2 px-4'>Home</a></li>
 
             {/* Hot Location Dropdown */}

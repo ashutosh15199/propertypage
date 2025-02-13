@@ -4,8 +4,6 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import backgroundImage from '../assets/image/backgroundimage/1.webp'
-import { GiMusicalKeyboard } from 'react-icons/gi'
-import { LiaRupeeSignSolid } from 'react-icons/lia'
 // Importing property images
 import image1 from '../assets/image/trending-project/pune-east/1.webp'
 import image2 from '../assets/image/trending-project/pune-east/2.webp'
@@ -28,7 +26,6 @@ import image17 from '../assets/image/trending-project/pune-west/4.webp'
 import image18 from '../assets/image/trending-project/pune-west/5.webp'
 import image19 from '../assets/image/trending-project/pune-west/6.webp'
 import { FaMapMarkerAlt } from 'react-icons/fa'
-import { IoCarOutline } from 'react-icons/io5'
 // import { FaMapMarkerAlt } from 'react-icons/fa';
 import EnquiryForm from './EnquiryForm'
 // Property Data
@@ -221,7 +218,7 @@ const TrendingProject = () => {
   return (
     <>
       <div
-        className=' bg-cover bg-center p-10 mt-10'
+        className=' bg-cover bg-center p-10'
       // style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <h2 className='text-2xl font-bold text-center mb-6 text-gray-800'>
