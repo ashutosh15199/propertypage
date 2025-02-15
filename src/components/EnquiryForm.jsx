@@ -1,23 +1,73 @@
 import React, { useState } from "react";
-
-const EnquiryForm = ({ onClose }) => {
+const EnquiryForm = ({ onClose , form}) => {
+  console.log("formdata",form);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     number: "",
     message: "",
   });
+  const [error , setError] = useState(null);
+  const [loading,setLoading] = useState('false');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    onClose(); // Close the form after submission
+    setError(null);
+    setLoading(true);
+    const api_key = "https://cms.propertystation.in/api/v2/ppc/lead";
+    const publicKey = "FutgeZL4HI2uFTs4B64BSu8w0SuL7/sZv40GWweD8VMD+xF4S6po7GgEu01s8BGd";
+    const secretKey = "R0iOrYjUrdT6omGFx6um32sGOBHvjEFYZa6e3KMFN4dxIPU8+D0iNw==";
+    const payload={
+      name: formData.name,
+      email: formData.email,
+      country_code: "+91",
+      mobile_no: formData.phone,
+      message: formData.message || "",   
+      subject: form.subject,
+      to_email: form.to_email,
+      source_id: form.source_id,
+      sub_source_id: form.sub_source_id,
+      builder_id: form.builder_id,
+      project_id: form.project_id,
+
+    };
+    console.log("form Data ", form);
+    try{
+      const response = await fetch(api_key, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "public-key": publicKey,
+          "secret-key": secretKey,
+        },
+        body:JSON.stringify(payload),
+      });
+     const responseText = await response.text();
+
+    if (response.ok) {
+      alert("Thank you for your enquiry!");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } else {
+      console.error("Response status:", response.status);
+      console.error("Response body:", responseText);
+      throw new Error(
+        `Submission failed with status ${response.status}: ${responseText}`
+      );
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    setError(err.message);
+    alert(`Submission failed: ${err.message}`);
+  } finally {
+    setLoading(false);
+  }
   };
 
+    
   return (
     // <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50 p-4">
     

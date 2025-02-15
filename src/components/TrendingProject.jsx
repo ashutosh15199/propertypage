@@ -28,6 +28,7 @@ import image19 from '../assets/image/trending-project/pune-west/6.webp'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 // import { FaMapMarkerAlt } from 'react-icons/fa';
 import EnquiryForm from './EnquiryForm'
+import {form} from '../data'
 // Property Data
 const properties = {
   'Pune East': [
@@ -296,7 +297,7 @@ const TrendingProject = () => {
 
 
             {/* Your Form Fields Here */}
-            <EnquiryForm onClose={handleCloseForm} />
+            <EnquiryForm onClose={handleCloseForm} form={form} />
 
 
           </div>
