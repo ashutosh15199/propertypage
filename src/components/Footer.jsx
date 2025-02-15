@@ -64,7 +64,7 @@ const Footer = () => {
           </h3>
           <div className='flex space-x-4'>
             <a
-              href='https://facebook.com'
+              href='https://www.facebook.com/propertystationfb'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -73,7 +73,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href='https://twitter.com'
+              href='https://x.com/Prop_Station'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -82,7 +82,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href='https://instagram.com'
+              href='https://www.instagram.com/officialpropertystation'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href='https://linkedin.com'
+              href='https://www.linkedin.com/company/propertystation/'
               target='_blank'
               rel='noopener noreferrer'
             >
